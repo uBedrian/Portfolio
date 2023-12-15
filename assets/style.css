@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(240, 247, 253);
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    row-gap: 42px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav div {
+    display: flex;
+    width: 80%;
+    gap: 3%;
+    justify-content: flex-end;
+}
+
+nav b {
+    font-size: 45px;
+}
+
+a {
+    color: black;
+    text-decoration: solid;
+    font-size: 30px;
+}
+
+a:hover {
+    color: rgb(68, 206, 168);
+}
+
+.seccion1 {
+    display: grid;
+    grid-template-columns: 20px auto;
+    grid-template-areas:
+        "ads main";
+    place-items: center;
+    column-gap: 15%;
+    height: 95vh;
+}
+
+.seccion1 main {
+    display: grid;
+    grid-area: main;
+    max-width: 850px;
+}
+
+#helloworld {
+    font-size: 60px;
+}
+
+#introduccion {
+    font-size: 20px;
+}
+
+.seccion1 aside {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(68, 206, 168);
+    padding: 50%;
+    width: 70px;
+    gap: 10px;
+    border-radius: 25px;
+    grid-area: ads;
+    height: 180px;
+    justify-content: center;
+    align-items: center;
+}
+
+.seccion1 aside img {
+    width: 100%;
+}
+
+.seccion1 aside a:hover {
+    width: 80%;
+}
+
+.seccion1 button {
+    background-color: rgb(68, 206, 168);
+    color: white;
+    box-sizing: border-box;
+    height: 25px;
+    width: 275px;
+    border-radius: 10px;
+    box-shadow: rgb(68, 206, 168, 0.5);
+    border: none;
+    margin-top: 4%;
+    place-self: center;
+}
+
+.seccion1 button:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.seccion2 {
+    height: 100vh;
+    display: flex;
+    grid-template-columns: 40% auto;
+    grid-template-rows: 100%;
+    grid-template-areas: "img main2";
+    gap: 25px;
+}
+
+.seccion2 div {
+    grid-area: img;
+}
+
+.seccion2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.seccion2 main {
+    display: grid;
+    grid-area: main2;
+    gap: 0.5%;
+}
+
+.cabecera {
+    font-size: 50px;
+}
+
+.seccion2 p {
+    font-size: 23px;
+}
+
+.seccion3 {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1fr ;
+    grid-template-areas:
+        "main3 aside3 ";
+    column-gap: 15px;
+    text-align: center;
+    align-items: center;
+}
+
+.seccion3 main {
+    grid-area: main3;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.proyectos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+
+.seccion3 img {
+    height: auto;
+    width: minmax(300px, auto-fill);
+}
+
+.seccion3 aside {
+    grid-area: aside3;
+    place-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+
+.habsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 35px;
+}
+
+.habs {
+    box-sizing: border-box;
+    border: solid;
+    height: 25px;
+    width: fit-content;
+    border-radius: 50px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2b3784;
+    color: white;
+}
+
+@media screen and (max-width: 836px) {
+    .seccion2 {
+        flex-direction: column-reverse;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav b {
+        font-size: 25px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    #helloworld {
+        font-size: 30px;
+    }
+
+    #introduccion {
+        font-size: 13px;
+    }
+
+    .seccion2 b {
+        font-size: 50px;
+        margin-bottom: 10%;
+    }
+
+    .seccion2 p {
+        font-size: 23px;
+    }
+}
+
+@media screen and (maw-width: 475px) {
+    .seccion3 {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "main3"
+            "aside3";
+    }
+}
+
+@media screen and (maw-width: 669px) {
+    .seccion2 {
+        grid-template-columns: auto;
+        grid-template-areas:
+            "img"
+            "main2"
+        ;
+    }
+
+}
+
+@media screen and (max-width: 300px) {
+    nav b {
+        font-size: 45px;
+    }
+
+    nav a {
+        font-size: 15px;
+    }
+
+    #helloworld {
+        font-size: 32px;
+    }
+
+    #introduccion {
+        font-size: 13px;
+    }
+
+    .seccion2 b {
+        font-size: 5px;
+        margin-bottom: 10%;
+    }
+
+    .seccion2 p {
+        font-size: 30px;
+    }
+}
